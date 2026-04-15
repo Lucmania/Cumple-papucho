@@ -510,6 +510,13 @@ p {
     overflow-y: auto;
   }
 
+  .view.is-active::before {
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.035) 50%, rgba(0, 0, 0, 0.06) 50%),
+      radial-gradient(circle at center, transparent 62%, rgba(0, 0, 0, 0.24));
+    background-size: 100% 4px, 100% 100%;
+  }
+
   .fighters,
   .mission-panel {
     grid-template-columns: 1fr;
