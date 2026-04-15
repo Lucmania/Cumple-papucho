@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Invitación Arcade</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="arcade-app">
+  <audio id="themeMusic" src="Techno Syndrome.mp3" preload="auto" autoplay loop playsinline></audio>
+
+  <button class="sound-toggle" id="soundToggle" type="button" aria-label="Activar o pausar música">
+    Pausar música
+  </button>
+
+  <section class="view screen-start is-active" id="startScreen" aria-label="Pantalla inicial">
+    <main class="arcade-frame start-card">
+      <p class="eyebrow">MaxLucana</p>
+      <h1>¿Estás listo?</h1>
+      <p class="intro-text">Has recibido una invitación única y especial</p>
+
+      <div class="button-row">
+        <button class="game-button game-button-secondary" type="button" data-ready>No</button>
+        <button class="game-button" type="button" data-ready>Sí</button>
+      </div>
+    </main>
+
+    <img
+      class="franco-sticker"
+      src="assets/franco-colapinto.png"
+      alt="Franco colapinto"
+      onerror="this.hidden = true"
+    >
+
+    <div class="ready-overlay" id="readyOverlay" aria-live="polite">
+      <div class="impact-text">¡Pero claro que sí estás listo!</div>
+      <p>Llamando y conectando a la fierroflia</p>
+    </div>
+  </section>
+
+  <section class="view screen-select" id="selectScreen" aria-label="Selección de personajes">
+    <main class="select-stage">
+      <p class="eyebrow">Misión de cumpleaños</p>
+      <h1>Personajes seleccionados</h1>
+      <p class="select-hint">El equipo está recibiendo la misión...</p>
+
+      <section class="fighters" aria-label="Personajes invitados">
+        <article class="fighter fighter-left">
+          <div class="fighter-portrait">
+            <img src="assets/2.png" alt="Foto de mi hermana">
+            <span>Camineitor</span>
+          </div>
+          <h2>Player 2</h2>
+        </article>
+
+        <article class="fighter fighter-center">
+          <div class="fighter-portrait main-player">
+            <img src="assets/1.png" alt="Foto de papá">
+            <span>MaxLucana</span>
+          </div>
+          <h2>Player 1</h2>
+        </article>
+
+        <article class="fighter fighter-right">
+          <div class="fighter-portrait">
+            <img src="assets/3.png" alt="Mi foto">
+            <span>Tuki</span>
+          </div>
+          <h2>Player 3</h2>
+        </article>
+      </section>
+
+      <p class="loading-text">Cargando invitación final...</p>
+    </main>
+  </section>
+
+  <section class="view screen-letter" id="letterScreen" aria-label="Carta de invitación">
+    <main class="letter-card">
+      <div class="badge">Misión especial</div>
+      <h1>¡Feliz cumpleaños papux!</h1>
+
+      <p>
+        Te invitamos a una misión muy especial: compartir una merienda juntos,
+        jugar juegos de mesa y pasar una tarde llena de risas en
+        <strong>Craft, el café de los juegos</strong>.
+      </p>
+
+      <p>
+        Esta misión se realizará el sabado 25 de Abril, dando el tiempo
+        suficiente a todos los jugadores para poder prepararse.
+      </p>
+
+      <p class="heart-message">
+        Este evento se realizará como agradecimiento por estar siempre,
+        por cuidarnos, acompañarnos y regalarnos tantos momentos lindos juntos;
+        Por ayudarnos a formarnos como guerreros para este mundo.
+        Te queremos muchísimo.
+      </p>
+
+      <section class="mission-panel" aria-label="Detalles de la invitación">
+        <div>
+          <span>Modo</span>
+          <strong>Merienda + juegos</strong>
+        </div>
+        <div>
+          <span>Lugar</span>
+          <strong>Craft Juegos</strong>
+        </div>
+        <div>
+          <span>Fecha</span>
+          <strong>25 de Abril</strong>
+        </div>
+      </section>
+
+      <button class="game-button" type="button" id="acceptMissionButton">
+        Aceptar misión
+      </button>
+    </main>
+  </section>
+
+  <section class="view screen-accepted" id="acceptedScreen" aria-label="Misión aceptada">
+    <main class="letter-card accepted-card">
+      <div class="badge">Misión aceptada</div>
+      <h1>¡Gracias por aceptar!</h1>
+
+      <p>
+        Te queremos muchísimo y nos pone muy felices compartir esta misión con vos.
+      </p>
+
+      <p class="heart-message">
+        Te esperamos el sábado 25 para merendar, jugar y celebrar juntos.
+      </p>
+
+    </main>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
